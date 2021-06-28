@@ -1,8 +1,19 @@
-function App() {
+import Router from "./router";
+import {MuiThemeProvider} from "@material-ui/core";
+import {lightTheme, darkTheme} from "./Themes";
+
+
+function App(props) {
+  const {history, initTheme} = props;
+  
   return (
-    <div>
-      Hello World
-    </div>
+      <MuiThemeProvider
+      theme={
+        initTheme === "Dark"
+        ? lightTheme
+        : darkTheme}>
+          <Router history={history}/>
+     </MuiThemeProvider>
   );
 }
 
