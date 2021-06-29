@@ -4,10 +4,12 @@ import {lightTheme, darkTheme} from "./Themes";
 
 function App(props) {
   const {history, initTheme} = props;
+  const globalLoadingProgressDynamic = 0;
 
   return (
    
       <MuiThemeProvider
+        progress={globalLoadingProgressDynamic}
         theme={
           initTheme === "Dark"
           ? lightTheme

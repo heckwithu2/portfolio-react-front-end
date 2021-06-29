@@ -3,6 +3,7 @@ import {useStyles} from "./styles";
 import {Grid} from "@material-ui/core";
 import Category from "../../Components/category";
 import PropTypes from 'prop-types';
+import Header from "../../Components/header";
 
 const HomeScreen = (props) => {
     const { categories } = props;
@@ -10,7 +11,7 @@ const HomeScreen = (props) => {
     
     const renderCategories = (categories) => {
         return (
-            <Grid container className={classes.categoriesSection}>
+            <Grid  item xs={12} container className={classes.categoriesSection}>
                 {categories.map((category) => 
                     <Grid item xs={4}>
                         <Category 
@@ -26,9 +27,15 @@ const HomeScreen = (props) => {
 
     return (
         <Grid justify="center" alignItems="center" container className={classes.home}>
-            <Grid  item xs={12}>
-                {renderCategories(categories)}
+             
+            {/* header */}
+            <Grid item xs={12} container>
+                <Header/>
             </Grid>
+
+            {/* categories */}
+            {renderCategories(categories)}
+            
         </Grid>
     )
 }

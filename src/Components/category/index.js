@@ -2,6 +2,7 @@ import React from 'react';
 import { useStyles } from './styles';
 import { Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import Typography from '@material-ui/core/typography';
 
 const Category = (props) => {
     const {title} = props;
@@ -11,7 +12,7 @@ const Category = (props) => {
     return (
         <Grid className={`${classes.blueCategory}`}>
             <Grid className={classes.categoryTitle} >
-                {title}
+                <Typography>{title}</Typography>
             </Grid>
         </Grid>
     )

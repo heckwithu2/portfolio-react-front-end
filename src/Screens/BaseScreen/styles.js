@@ -1,7 +1,11 @@
 
 import { makeStyles} from "@material-ui/core";
+import { globalSpacing  } from "../../Themes";
 
 export const useStyles = makeStyles((theme) => ({
+    root: {
+        width: '100%',
+      },
     main: {
         height: `100vh`,
         width: '100vw',
@@ -9,8 +13,9 @@ export const useStyles = makeStyles((theme) => ({
         color: theme.text.primary,
     },
     mainContainer: {
-        backgroundColor: theme.palette.background.default,
-        height: `100vh`,
+        marginTop: `${globalSpacing/2}px`,
+        backgroundColor: `inherit`,
+        height: `auto`,
         width: '100vw',
     }
 }));
