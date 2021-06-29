@@ -9,8 +9,10 @@ const Category = (props) => {
 
 
     return (
-        <Grid className={classes.category}>
-            {title}
+        <Grid className={`${classes.blueCategory}`}>
+            <Grid className={classes.categoryTitle} >
+                {title}
+            </Grid>
         </Grid>
     )
 }
