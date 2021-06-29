@@ -26,6 +26,7 @@ const HomeScreen = (props) => {
                             title={entry.title}
                             body={entry.body}
                             date={entry.date}
+                            company={entry.company}
                             image={entry.image}
                             link={entry.organizationLink}
                             otherLink={entry.otherLinks}

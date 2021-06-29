@@ -6,17 +6,17 @@ import { Typography } from "@material-ui/core";
 import Link from '../link';
 
 const Event = (props) => {
-    const { title, body, date, image, otherLink, link } = props;
+    const { title, body, company, date, image, otherLink, link } = props;
     const classes = useStyles();
     return (
         <Grid container className={classes.eventDecal} >
             <Grid item xs={12} className={classes.event}>
                 <Typography variant={'h6'} className={classes.text}>{title}</Typography>
-                <Typography className={classes.text}>{body}</Typography>
                 <Typography className={classes.text}>{date}</Typography>
+                <Typography className={classes.text}>{body}</Typography>
                 <Typography>{image}</Typography>
-                {link !== null && <Link href={link} name={`Organization's Link`} target={true}/>}
-                {otherLink !== null && <Link href={otherLink} name={`Other Links`} target={true}/>}
+                {link !== null && <Link destination={link} name={`${company}`} target={true}/>}
+                {otherLink !== null && <Link destination={otherLink} name={`Other Links`} target={true}/>}
             </Grid>
         </Grid>
         
@@ -31,6 +31,7 @@ Event.propTypes = {
     image: PropTypes.string,
     otherLink: PropTypes.string,
     link: PropTypes.string,
+    company: PropTypes.string.isRequired,
 }
 
 Event.defaultProps = {
@@ -40,6 +41,7 @@ Event.defaultProps = {
     image: null,
     otherLink: null,
     link: null,
+    company: null,
 }
 
 export default Event;

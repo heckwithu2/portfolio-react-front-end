@@ -41,7 +41,7 @@ Menu.propTypes = {
 }
 
 Menu.defaultProps = {
-  menuTitle: "Jeremiah Heck",
+  menuTitle: "Portfolio | Curriculum Vitae",
 }
 
 export default Menu;
