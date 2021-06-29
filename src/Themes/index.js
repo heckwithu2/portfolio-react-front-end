@@ -1,7 +1,7 @@
 import {createMuiTheme} from "@material-ui/core";
 
 export const globalSpacing = 15;
-export const globalBorderRadius = 2;
+export const globalBorderRadius = 5;
 export const globalLoadingProgress = 100;
 
 export const white = "#ffffff";
@@ -15,9 +15,9 @@ const lightestGrey = "#fafafa";
 const lightGrey = "#f5f5f5";
 const grey = "#9e9e9e";
 
-const lightBlue = "#6573c3";
-const blue = '#3f51b5';
-const darkBlue = "#2c387e";
+const lightBlue = "#474f97";
+const blue = '#283593';
+const darkBlue = "#121858";
 const lightGreen = "#388e3c";
 const green = "#2e7d32";
 const darkGreen = "#1b5e20";
@@ -25,18 +25,28 @@ const lightRed = "#ef5350";
 const red = "#f44336";
 const darkRed = "#b71c1c";
 
+const backgroundDarkPurple = '#160f1c';
+const backgroundLightPurple = '#160f1c';
 
-export const lightTheme = createMuiTheme({
-    
+const backgroundDarkRed = `rgb(20, 11, 11)`;
+const backgroundDarkBlue = `rgb(17, 21, 33)`;
+
+const backgroundLightRed = `rgb(36, 17, 17)`;
+const backgroundLightBlue = `rgb(17, 21, 36)`;
+
+
+export const lightTheme = createMuiTheme({    
     typography: {
         fontFamily: `JetBrains Mono , monospace`,
     },
-
 
     palette: {
         background: {
             default: white,
             shadow: lightGrey,
+            gradientBlue: backgroundLightBlue,
+            gradientRed: backgroundLightRed,
+            gradientPurple: backgroundLightPurple,
         },
         primary: {
             light:  lightestGrey,
@@ -87,11 +97,14 @@ export const darkTheme = createMuiTheme({
     typography: {
         fontFamily: `JetBrains Mono , monospace`,
     },
-    
+
     palette: {
         background: {
             default: darkGrey,
             shadow: darkerGrey,
+            gradientBlue: backgroundDarkBlue,
+            gradientRed: backgroundDarkRed,
+            gradientPurple: backgroundDarkPurple,
         },
         primary: {
             light: grey,

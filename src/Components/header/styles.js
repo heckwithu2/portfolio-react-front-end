@@ -8,10 +8,12 @@ export const useStyles = makeStyles((theme) => ({
         marginTop: `${globalSpacing/2}px`,
         marginBottom: `${globalSpacing/2}px`,
         padding: `0px`,
-        backgroundColor: theme.palette.background.default,
+        background: `linear-gradient(217deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%),
+        linear-gradient(127deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%),
+        linear-gradient(336deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%)`,        //backgroundColor: theme.palette.background.gradientPurple,
         height: `auto`,
         minHeight: `15vh`,
         borderRadius: `${globalBorderRadius}px`,
-        border: `2px solid ${theme.categories.blue.main}`,
+        border: `3px solid ${theme.palette.primary.main}`,
     }
 }));
