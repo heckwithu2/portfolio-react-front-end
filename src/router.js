@@ -3,7 +3,8 @@ import {ConnectedRouter} from "connected-react-router";
 import { 
     HOME,
 } from "./routes";
-import HomeScreen from "./Screens/homeScreen";
+import HomeScreen from "./Screens/HomeScreen/homeScreen";
+import BaseScreen from "./Screens/BaseScreen/baseScreen";
 
 function Router({history}) {
     return (
@@ -11,7 +12,7 @@ function Router({history}) {
             <BrowserRouter>
                 <Switch>
                     <Route path={HOME}>
-                        <HomeScreen/>
+                        <BaseScreen screen={<HomeScreen/>}/>
                     </Route>
                     <Route path={""}>
                         <Redirect to={HOME}/>
