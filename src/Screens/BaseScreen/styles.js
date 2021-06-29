@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme) => ({
         width: '100%',
       },
     main: {
-        height: `100vh`,
+        minHeight: `100vh`,
         width: '100vw',
         background: `linear-gradient(217deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%),
         linear-gradient(127deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%),
