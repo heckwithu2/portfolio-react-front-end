@@ -27,6 +27,8 @@ const HomeScreen = (props) => {
                             body={entry.body}
                             date={entry.date}
                             image={entry.image}
+                            link={entry.organizationLink}
+                            otherLink={entry.otherLinks}
                         />
                         {entry.id !== cvEntries.length - 1 && <Event/>}
                     </Grid>
@@ -102,7 +104,7 @@ HomeScreen.defaultProps = {
             company: "Carimus",
             body: "In my final semester of Kent State, I took on an internship at Carimus, a software company that focuses on creating a brand, design and business plan for start up companies. Though located in downtown Raleigh, I worked remotely to fix bugs, and add translations to an app called Luma. The front-end was built in React, Redux and Saga among other libraries. An the back-end was in Spring.",
             date: "4-29-2021 - 6/28/2021",
-            image: "No Image Yet",
+            image: "",
             organizationLink: 'https://carimus.com/',
             otherLinks: `https://lumapr.com/?lang=en&__cf_chl_jschl_tk__=dd1db642001042a1e7454c2d5ed0e492ab6453ff-1625006440-0-AflBTGx39zBK5tmpUIBHWXAQqSa5WiteBaX0zZkycfXwSY_W8Nv_saMBY49GcxySkgpcY0n1z5g7oSF25mzEFkkdm8aXzzDL3AflgyttH3xfnIBDzMOfgYe_gpqG0QKWVZK1bDWmryC47vG9iyKkzsMYcsKNaf7TsK-Aa7vu9VQ12vTDniyelk5bSe7gHGTPEUodlo6fmTFNLV5IlVq6V8rgiPaAifSPiGwKqLSAOFloIUPr25EscjKiV_3LENBMyW-i-sasGJ1y4CC_puHZmrhwqY2qY-aeRn-7lWWBhm15L2ulaECwBBSqSw_CHikJ0HFmPKn7vD7IddjTmOApHbbZcpHnamdWs70UHSZQ9jI3Qm0ykjMmHMu8MBzEMxWuUgjAI2jfAGJA0ZzVSZ7BTFc`,
         },
@@ -112,7 +114,7 @@ HomeScreen.defaultProps = {
             company: "Kasper Holdings, Inc",
             body: "I was rehired by Kasper Holdings during my Junior year summer to contribute on the TradeFull platform. I continued to learn Laravel, and regularly use Microsoft SQL Server, Bootstrap and more to fix various bugs.",
             date: "5/15/2020 - 6/15/2020",
-            image: "No Image Yet",
+            image: "",
             organizationLink: `https://www.tradefull.com/`,
         },
         {
@@ -121,7 +123,7 @@ HomeScreen.defaultProps = {
             company: "Kasper Holdings, Inc",
             body: "During my sophomore year I was hired to contribute to the front page of Kasper Holdings eCommerce platform AreaTrend. I worked with artists and marketing to implement mock-ups in Bootstrap, HTML, CSS and Laravel.",
             date: "5/15/2019 - 8/15/2019",
-            image: "No Image Yet",
+            image: "",
         },
         {
             id: 3,
@@ -130,7 +132,7 @@ HomeScreen.defaultProps = {
             body: "During my time at KSU, I pursued my interests in Video Games, and joined the Animation and Game Design Club. I initially volunteered to be the treasurer, and was eventually voted in as the President of the club. I organized many events with my fellow club members, including two Global Game Jams and trips to multiple game convention.",
             date: "8/20/2018 - 8/20/2020",
             organizationLink: `https://www.kent.edu/csi/animation-and-game-design-club`,
-            otherLinks: 'https://gandacksu.jeremiahheck.tech/Homepage.html',
+            otherLinks: 'https://globalgamejam.org/',
         },
         {
             id: 4,
@@ -146,7 +148,7 @@ HomeScreen.defaultProps = {
             company: "United States Army",
             body: "After HighSchool I joined the Army on active duty as a Combat Medic Specialist. I learned so many things: leadership, communication, confidence, self-reliance and more. I worked my way into the communications job at the company level where I obtained a Secret Clearance, and was in charge of millions of dollars of equipment and its functionality.",
             date: "8/27/2013 - 8/28/2017",
-            image: "No Image Yet",
+            image: "",
             organizationLink: `https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html`,
         },
     ],

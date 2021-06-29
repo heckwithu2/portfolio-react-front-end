@@ -3,7 +3,6 @@ import React from "react";
 import {useStyles} from "./styles";
 import PropTypes from 'prop-types';
 
-
 const Message = (props) => {
     const { body } = props;
     const classes = useStyles();
