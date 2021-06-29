@@ -1,4 +1,3 @@
-
 import { makeStyles} from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
@@ -7,7 +6,9 @@ export const useStyles = makeStyles((theme) => ({
     },
     eventDecal: {
         minHeight: `2px`,
-        margin: `10px`,
-        borderLeft: `2px solid ${theme.text.primary}`,
+        margin: `15px`,
+        marginLeft: `15%`,
+        marginRight: `15%`,
+        borderLeft: `2px solid ${theme.categories.blue.main}`,
     }
 }));

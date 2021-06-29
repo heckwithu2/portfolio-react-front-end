@@ -5,16 +5,17 @@ import Project from "../../Components/project";
 import PropTypes from 'prop-types';
 import Header from "../../Components/header";
 import Event from "../../Components/event";
+import Typography from '@material-ui/core/Typography';
 
 const HomeScreen = (props) => {
-    const { categories, cvEntries } = props;
+    const { categories, cvEntries, headerSectionTitles } = props;
     const classes = useStyles();
     
     const renderCV = (cvEntries) => {
         return (
-            <Grid  item xs={12} container className={classes.cv}>
+            <Grid  item xs={12} className={classes.cv} container>
                 {cvEntries.map((entry) => 
-                    <Grid item xs={10}
+                    <Grid item xs={12}
                         container
                         direction="row"
                         justify="center"
@@ -36,7 +37,7 @@ const HomeScreen = (props) => {
 
     const renderCategories = (categories) => {
         return (
-            <Grid  item xs={12} container className={classes.categoriesSection}>
+            <Grid item xs={12} container className={classes.categoriesSection}>
                 {categories.map((category) => 
                     <Grid item xs={4}>
                         <Project 
@@ -58,9 +59,12 @@ const HomeScreen = (props) => {
                 <Header/>
             </Grid>
             
+            <Typography variant={`h6`} className={classes.sectionTitles}>{headerSectionTitles[0]}</Typography>
             {/* {CV} */}
             {renderCV(cvEntries)}
+            
 
+            <Typography variant={`h6`} className={classes.sectionTitles}>{headerSectionTitles[1]}</Typography>
             {/* categories */}
             {renderCategories(categories)}
             
@@ -72,9 +76,14 @@ const HomeScreen = (props) => {
 HomeScreen.propTypes = {
     categories: PropTypes.arrayOf(PropTypes.string),
     cvEntries: PropTypes.arrayOf(PropTypes.object),
+    headerSectionTitles: PropTypes.arrayOf(PropTypes.string),
 }
 
 HomeScreen.defaultProps = {
+    headerSectionTitles: [
+        `Curriculum Vitae`,
+        `Projects`,
+    ],
     categories: [
         "Club website",
         "Ios To-Do App",
@@ -89,40 +98,58 @@ HomeScreen.defaultProps = {
     cvEntries : [
         {
             id: 0,
-            title: "Areatrend Internship",
-            body: "THis was an awesome experience to be sure, blah blah blah..",
-            date: "5/15/2018",
+            title: "Software Engineer Intern",
+            company: "Carimus",
+            body: "In my final semester of Kent State, I took on an internship at Carimus, a software company that focuses on creating a brand, design and business plan for start up companies. Though located in downtown Raleigh, I worked remotely to fix bugs, and add translations to an app called Luma. The front-end was built in React, Redux and Saga among other libraries. An the back-end was in Spring.",
+            date: "4-29-2021 - 6/28/2021",
             image: "No Image Yet",
+            organizationLink: 'https://carimus.com/',
+            otherLinks: `https://lumapr.com/?lang=en&__cf_chl_jschl_tk__=dd1db642001042a1e7454c2d5ed0e492ab6453ff-1625006440-0-AflBTGx39zBK5tmpUIBHWXAQqSa5WiteBaX0zZkycfXwSY_W8Nv_saMBY49GcxySkgpcY0n1z5g7oSF25mzEFkkdm8aXzzDL3AflgyttH3xfnIBDzMOfgYe_gpqG0QKWVZK1bDWmryC47vG9iyKkzsMYcsKNaf7TsK-Aa7vu9VQ12vTDniyelk5bSe7gHGTPEUodlo6fmTFNLV5IlVq6V8rgiPaAifSPiGwKqLSAOFloIUPr25EscjKiV_3LENBMyW-i-sasGJ1y4CC_puHZmrhwqY2qY-aeRn-7lWWBhm15L2ulaECwBBSqSw_CHikJ0HFmPKn7vD7IddjTmOApHbbZcpHnamdWs70UHSZQ9jI3Qm0ykjMmHMu8MBzEMxWuUgjAI2jfAGJA0ZzVSZ7BTFc`,
         },
         {
             id: 1,
-            title: "Areatrend Internship",
-            body: "This was an awesome experience to be sure, blah blah blah..This was an awesome experience to be sure, blah blah blah..This was an awesome experience to be sure, blah blah blah..This was an awesome experience to be sure, blah blah blah..",
-            date: "5/15/2018",
+            title: "Full Stack Developer Intern",
+            company: "Kasper Holdings, Inc",
+            body: "I was rehired by Kasper Holdings during my Junior year summer to contribute on the TradeFull platform. I continued to learn Laravel, and regularly use Microsoft SQL Server, Bootstrap and more to fix various bugs.",
+            date: "5/15/2020 - 6/15/2020",
             image: "No Image Yet",
+            organizationLink: `https://www.tradefull.com/`,
         },
         {
             id: 2,
-            title: "Areatrend Internship",
-            body: "THis was an awesome experience to be sure, blah blah blah..",
-            date: "5/15/2018",
+            title: "Front End Developer Intern",
+            company: "Kasper Holdings, Inc",
+            body: "During my sophomore year I was hired to contribute to the front page of Kasper Holdings eCommerce platform AreaTrend. I worked with artists and marketing to implement mock-ups in Bootstrap, HTML, CSS and Laravel.",
+            date: "5/15/2019 - 8/15/2019",
             image: "No Image Yet",
         },
         {
             id: 3,
-            title: "Areatrend Internship",
-            body: "THis was an awesome experience to be sure, blah blah blah..",
-            date: "5/15/2018",
-            image: "No Image Yet",
+            title: "President",
+            company: "Animation and Game Design Club, Kent State University",
+            body: "During my time at KSU, I pursued my interests in Video Games, and joined the Animation and Game Design Club. I initially volunteered to be the treasurer, and was eventually voted in as the President of the club. I organized many events with my fellow club members, including two Global Game Jams and trips to multiple game convention.",
+            date: "8/20/2018 - 8/20/2020",
+            organizationLink: `https://www.kent.edu/csi/animation-and-game-design-club`,
+            otherLinks: 'https://gandacksu.jeremiahheck.tech/Homepage.html',
         },
         {
             id: 4,
-            title: "Areatrend Internship",
-            body: "This was an awesome experience to be sure, blah blah blah..This was an awesome experience to be sure, blah blah blah..THis was an awesome experience to be sure, blah blah blah..",
-            date: "5/15/2018",
-            image: "No Image Yet",
+            title: "University Student",
+            company: "Kent State University",
+            body: "Immediately after college I entered Kent State as a business student with two goals: learning to program at a high level, and business fundamentals. I achieved both with my degree in Computer Information Systems and Computer Science.",
+            date: "8/20/2017 - 5/15/2021",
+            organizationLink: `https://www.kent.edu/business/mis`,
         },
-    ]
+        {
+            id: 5,
+            title: "Corporal, Non Commissioned Officer",
+            company: "United States Army",
+            body: "After HighSchool I joined the Army on active duty as a Combat Medic Specialist. I learned so many things: leadership, communication, confidence, self-reliance and more. I worked my way into the communications job at the company level where I obtained a Secret Clearance, and was in charge of millions of dollars of equipment and its functionality.",
+            date: "8/27/2013 - 8/28/2017",
+            image: "No Image Yet",
+            organizationLink: `https://www.goarmy.com/careers-and-jobs/career-match/science-medicine/intensive-care/68w-combat-medic-specialist.html`,
+        },
+    ],
 }
 
 
