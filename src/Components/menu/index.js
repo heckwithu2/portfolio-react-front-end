@@ -6,8 +6,10 @@ import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import { useStyles } from "./styles";
 import LinearBarProgress from "../../Components/LinearBarProgress";
+import PropTypes from 'prop-types';
 
-const Menu = () => {
+const Menu = (props) => {
+  const { menuTitle } = props;
     const classes = useStyles();
 
     return (
@@ -15,9 +17,9 @@ const Menu = () => {
           <LinearBarProgress/>
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-            Jeremiah Heck
+            {menuTitle}
           </Typography>
-          <div className={classes.search}>
+          {/* <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
@@ -28,11 +30,18 @@ const Menu = () => {
                 input: classes.inputInput,
               }}
             />
-          </div>
+          </div> */}
         </Toolbar>
       </AppBar>
     )
 }
 
+Menu.propTypes = {
+  menuTitle: PropTypes.string.isRequired,
+}
+
+Menu.defaultProps = {
+  menuTitle: "Jeremiah Heck",
+}
 
 export default Menu;
