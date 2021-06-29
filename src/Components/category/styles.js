@@ -3,14 +3,15 @@ import { globalSpacing, globalBorderRadius } from "../../Themes";
 
 export const useStyles = makeStyles((theme) => ({
     category: {
-        marginTop: `${globalSpacing}px`,
+        margin: `${globalSpacing/2}px`,
         paddingTop: `0px`,
         height: `auto`,
         minHeight: `250px`,
-        margin: `${globalSpacing/0}px`,
-        backgroundColor: theme.palette.primary.dark,
-        border: `2px solid ${theme.palette.secondary.main}`,
+        background: `linear-gradient(217deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%),
+        linear-gradient(127deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%),
+        linear-gradient(336deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%)`,   
         borderRadius: `${globalBorderRadius}px`,
+        border: `3px solid ${theme.palette.primary.main}`,
         textAlign: `center`,
     },
     categoryTitle: {
@@ -20,19 +21,9 @@ export const useStyles = makeStyles((theme) => ({
         padding: `10px`,
         width: `100%`,
         textAlign: `left`,
-        backgroundColor: theme.categories.blue.main,
+        borderBottom: `3px solid ${theme.categories.blue.main}`,
         color: theme.text.primary,
         fontWeight: `bolder`,
         cursor: `pointer`,
     },
-    blueCategory: {
-        margin: `${globalSpacing/2}px`,
-        backgroundColor: theme.palette.primary.main,
-        paddingTop: `0px`,
-        height: `auto`,
-        minHeight: `250px`,
-        border: `2px solid ${theme.categories.blue.main}`,
-        borderRadius: `${globalBorderRadius}px`,
-        textAlign: `center`,
-    }
 }));

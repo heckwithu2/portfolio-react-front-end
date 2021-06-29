@@ -4,9 +4,7 @@ import { globalBorderRadius } from "../../Themes";
 
 export const useStyles = makeStyles((theme) => ({
     root: {
-        //position: `sticky`,
         flexGrow: 1,
-        //top: `30px`,
       },
       menuButton: {
         marginRight: theme.spacing(2),
@@ -21,7 +19,8 @@ export const useStyles = makeStyles((theme) => ({
       },
       search: {
         position: 'relative',
-        borderRadius: `${globalBorderRadius * 2}px`,
+        borderRadius: `${globalBorderRadius}px`,
+        border: `3px solid ${theme.categories.blue.main}`,
         backgroundColor: fade(theme.palette.secondary.light, 0.15),
         '&:hover': {
           backgroundColor: fade(theme.palette.secondary.light, 0.25),

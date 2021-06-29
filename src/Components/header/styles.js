@@ -15,5 +15,13 @@ export const useStyles = makeStyles((theme) => ({
         minHeight: `15vh`,
         borderRadius: `${globalBorderRadius}px`,
         border: `3px solid ${theme.palette.primary.main}`,
-    }
+    },
+    icon: {
+        height: `35px`,
+        width: `35px`,
+        [theme.breakpoints.down('sm')]: {
+            height: `30px`,
+            width: `30px`,
+        },
+    },
 }));

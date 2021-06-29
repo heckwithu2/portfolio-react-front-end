@@ -6,7 +6,7 @@ const Skill = () => {
     const classes = useStyles();
 
     return (
-        <div>Skill</div>
+        <div></div>
     )
 }
 

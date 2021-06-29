@@ -1,23 +1,23 @@
 import {createMuiTheme} from "@material-ui/core";
 
 export const globalSpacing = 15;
-export const globalBorderRadius = 5;
+export const globalBorderRadius = 6;
 export const globalLoadingProgress = 100;
 
 export const white = "#ffffff";
 export const black = "#000000";
-const superDarkGrey = "#212121";
+const superDarkGrey = "#191919";
 const superDarkLightGrey = "#757575"; 
 const darkerGrey = "#252525";
-const darkGrey = "#353535";
+const darkGrey = "#252525";
 const orange = '#ffc400';
 const lightestGrey = "#fafafa";
 const lightGrey = "#f5f5f5";
 const grey = "#9e9e9e";
 
-const lightBlue = "#474f97";
-const blue = '#283593';
-const darkBlue = "#121858";
+const lightBlue = "#7986cb";
+const blue = '#3f51b5';
+const darkBlue = "#283593";
 const lightGreen = "#388e3c";
 const green = "#2e7d32";
 const darkGreen = "#1b5e20";

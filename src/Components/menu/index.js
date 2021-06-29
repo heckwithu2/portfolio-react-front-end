@@ -27,7 +27,6 @@ const Menu = () => {
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
-              inputProps={{ 'aria-label': 'search' }}
             />
           </div>
         </Toolbar>

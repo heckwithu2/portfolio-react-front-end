@@ -10,7 +10,7 @@ const Category = (props) => {
 
 
     return (
-        <Grid className={`${classes.blueCategory}`}>
+        <Grid className={`${classes.category}`}>
             <Grid className={classes.categoryTitle} >
                 <Typography>{title}</Typography>
             </Grid>
