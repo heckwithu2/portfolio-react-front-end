@@ -2,7 +2,7 @@
 import { fade, makeStyles} from "@material-ui/core";
 import { orange300 } from "material-ui/styles/colors";
 import { yellow500 } from "material-ui/styles/colors";
-import { globalBorderRadius } from "../../Themes";
+import { globalBorderRadius, white } from "../../Themes";
 
 export const useStyles = makeStyles((theme) => ({
     root: {
@@ -77,4 +77,10 @@ export const useStyles = makeStyles((theme) => ({
         cursor: `pointer`,
         color: orange300,
       },
+      icon: {
+        color: white,
+        height: `50px`,
+        width: `50px`,
+        marginTop: `20px`,
+      }
 }));

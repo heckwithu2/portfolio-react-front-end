@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     
     item: {
         minWidth: `50px`,
-        marginRight: `15%`,
+        marginRight: `20%`,
     },
     title: {
         color: white,

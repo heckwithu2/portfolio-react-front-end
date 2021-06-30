@@ -12,6 +12,9 @@ import NightsStayIcon from '@material-ui/icons/NightsStay';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import { connect } from 'react-redux';
 import { changeTheme } from "../../Redux/init/actions";
+import Link from "../link";
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const Menu = (props) => {
   const { menuTitle, theme, changeTheme} = props;
@@ -60,18 +63,8 @@ const Menu = (props) => {
               alignItems="center"
               className={classes.iconRow}
             >
-              <Toolbar >
-                <Tabs
-                  variant="fullWidth"
-                >
-                  <MenuItem link={`https://www.linkedin.com/in/jeremiah-heck-498b1a184/`} image={`LinkedIn`}/>
-                </Tabs>
-                <Tabs
-                  variant="fullWidth"
-                >         
-                  <MenuItem link={`https://github.com/heckwithu2`} image={`GitHub`}/>
-                </Tabs>
-              </Toolbar>
+              <a target={`blank`} className={classes.icon} href={`https://www.linkedin.com/in/jeremiah-heck-498b1a184/`}><LinkedInIcon/></a>
+              <a target={`blank`} className={classes.icon} href={`https://github.com/heckwithu2`}><GitHubIcon/></a>
               {localStorage.getItem("theme") === "Dark" 
               ? <NightsStayIcon onClick={() => changeTheme("Light")} className={classes.themeIconDark}/> 
               : <WbSunnyIcon onClick={() => changeTheme("Dark")} className={classes.themeIconLight}/>}
