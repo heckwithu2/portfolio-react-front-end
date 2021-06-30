@@ -5,9 +5,6 @@ export const useStyles = makeStyles((theme) => ({
     home: {
         paddingBottom: `45px`,
     },
-    sectionTitles: {
-        margin: `35px`,
-    },
     categoriesSection: {
         marginTop: `${globalSpacing/2}px`,
     },

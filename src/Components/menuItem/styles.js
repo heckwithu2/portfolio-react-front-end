@@ -24,5 +24,8 @@ export const useStyles = makeStyles((theme) => ({
             textDecoration: `unset`,
             color: theme.categories.blue.main,
          },
+    },
+    titleActive : {
+        color: theme.categories.blue.light,
     }
 }));

@@ -8,8 +8,10 @@ import { useStyles } from "./styles";
 import LinearBarProgress from "../../Components/LinearBarProgress";
 import PropTypes from 'prop-types';
 import MenuItem from "../menuItem";
-import {HOME,CV, PROJECTS} from '../../routes';
+import {HOME,CV, PROJECTS, ABOUT} from '../../routes';
 import {Grid} from "@material-ui/core";
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
 const Menu = (props) => {
   const { menuTitle } = props;
@@ -19,24 +21,16 @@ const Menu = (props) => {
         <AppBar position="sticky">
           <LinearBarProgress/>
         <Toolbar className={classes.toolbar}>
-          <Grid container direction="row" justify="flex-start" alignItems="center">
-            <Grid item xs={12} md={6}  container  >
-              <Grid item xs={3} >
-                <MenuItem link={`${HOME}#${CV}`}>{menuTitle[0]}
-                </MenuItem>
-              </Grid>
-              <Grid item xs={3}>
-                <MenuItem link={`${HOME}#${PROJECTS}`}>{menuTitle[1]}
-                </MenuItem>
-              </Grid>
-              <Grid item xs={3} >
-                <MenuItem link={`https://www.linkedin.com/in/jeremiah-heck-498b1a184/`} image={`LinkedIn`}/>
-              </Grid>
-              <Grid item xs={3} >
-                <MenuItem link={`https://github.com/heckwithu2`} image={`GitHub`}/>
-              </Grid>
-            </Grid>
-          </Grid>
+          <Tabs
+            aria-label="disabled tabs example"
+          >
+            <MenuItem link={`${HOME}#${ABOUT}`}>{menuTitle[0]} </MenuItem>
+            <MenuItem link={`${HOME}#${CV}`}>{menuTitle[1]}</MenuItem>
+            <MenuItem link={`${HOME}#${PROJECTS}`}>{menuTitle[2]} </MenuItem>
+            <MenuItem link={`https://www.linkedin.com/in/jeremiah-heck-498b1a184/`} image={`LinkedIn`}/>
+            <MenuItem link={`https://github.com/heckwithu2`} image={`GitHub`}/>
+          </Tabs>
+
 
           {/* <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -62,6 +56,7 @@ Menu.propTypes = {
 
 Menu.defaultProps = {
   menuTitle: [ 
+    "About",
     "Curriculum Vitae",
     "Projects"  
   ],

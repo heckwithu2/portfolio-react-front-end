@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import Header from "../../Components/header";
 import Event from "../../Components/event";
 import Typography from '@material-ui/core/Typography';
-import { CV, HEADER, PROJECTS } from "../../routes";
+import { ABOUT, CV, HEADER, PROJECTS } from "../../routes";
+import SectionTitle from "../../Components/sectionTItles";
 
 const HomeScreen = (props) => {
     const { categories, cvEntries, headerSectionTitles } = props;
@@ -56,27 +57,15 @@ const HomeScreen = (props) => {
     }
 
     return (
-        <Grid justify="center" alignItems="center" container className={classes.home}>
-             
-            {/* header */}
+        <Grid justify="center" alignItems="center" container className={classes.home}>   
+            <SectionTitle title={`About`} inPageLink={`${ABOUT}`}/>
             <Grid item xs={12} container>
                 <Header/>
             </Grid>
-            
-            <a id={`${CV}`}>
-                <Typography variant={`h6`} className={classes.sectionTitles}>
-                    {headerSectionTitles[0]}
-                </Typography>
-            </a>
-            {/* {CV} */}
+            <SectionTitle title={headerSectionTitles[0]} inPageLink={`${CV}`} />
             {renderCV(cvEntries)}
-            
-            <a id={`${PROJECTS}`}>
-            <Typography variant={`h6`} className={classes.sectionTitles}>{headerSectionTitles[1]}</Typography>
-            </a>
-            {/* categories */}
+            <SectionTitle title={headerSectionTitles[1]} inPageLink={`${PROJECTS}`} />
             {renderCategories(categories)}
-            
         </Grid>
     )
 }
