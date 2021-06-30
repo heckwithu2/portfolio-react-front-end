@@ -23,5 +23,7 @@ export default function createStore(preloadedState) {
         composeWithDevTools(applyMiddleware(...middleware)),
     )
 
+    window.localStorage.setItem("theme", "Dark")
+
     return { store, history };
 }

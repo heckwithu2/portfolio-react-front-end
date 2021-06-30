@@ -1,6 +1,8 @@
 
 import { fade, makeStyles} from "@material-ui/core";
-import { black, globalBorderRadius } from "../../Themes";
+import { orange300 } from "material-ui/styles/colors";
+import { yellow500 } from "material-ui/styles/colors";
+import { globalBorderRadius } from "../../Themes";
 
 export const useStyles = makeStyles((theme) => ({
     root: {
@@ -60,15 +62,19 @@ export const useStyles = makeStyles((theme) => ({
       },
       toolbar: {
         background: `linear-gradient(45deg, #101010, #171717)`,
+        paddingLeft: `0px`,
+        paddingRight: `0px%`,
       },
-      themeIcon: {
-        margin: `0px`,
-        padding: `0px`,
-        width: `50px`,
+      themeIconLight: {
+        marginRight: `5%`,
+        marginBottom: `5px`,
+        cursor: `pointer`,
+        color: yellow500,
       },
-      moon: {
-        margin: `0px`,
-        padding: `0px`,
-        width: `50px`,
-      }
+      themeIconDark: {
+        marginRight: `5%`,
+        marginBottom: `5px`,
+        cursor: `pointer`,
+        color: orange300,
+      },
 }));

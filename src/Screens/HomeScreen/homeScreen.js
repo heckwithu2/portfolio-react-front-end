@@ -43,7 +43,7 @@ const HomeScreen = (props) => {
         return (
             <Grid item xs={12} container className={classes.categoriesSection}>
                 {categories.map((category) => 
-                    <Grid item xs={4}>
+                    <Grid item xs={12} sm={6} md={4}>
                         <Project 
                             alignText={"center"}
                             key={category.id} 

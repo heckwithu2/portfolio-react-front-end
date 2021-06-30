@@ -1,5 +1,5 @@
 import { makeStyles} from "@material-ui/core";
-import { globalLoadingProgress } from "../../Themes";
+import { black, globalLoadingProgress } from "../../Themes";
 
 
 
@@ -16,6 +16,6 @@ export const useStyles = makeStyles((theme, progress) => ({
         padding: `0px`,
         height: `3px`,
         width: `calc(${globalLoadingProgress}% - ${progress}}%)`,
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: black,
     }
 }));

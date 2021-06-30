@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { useStyles } from "./styles";
@@ -8,16 +8,14 @@ import MenuItem from "../menuItem";
 import {HOME,CV, PROJECTS, ABOUT} from '../../routes';
 import Tabs from '@material-ui/core/Tabs';
 import {Grid} from "@material-ui/core";
-import { 
-  FiMoon as Dark,
-  FiSun as Light,
-} from 'react-icons/fi';
-import Tab from '@material-ui/core/Tab';
-
+import NightsStayIcon from '@material-ui/icons/NightsStay';
+import WbSunnyIcon from '@material-ui/icons/WbSunny';
+import { connect } from 'react-redux';
+import { changeTheme } from "../../Redux/init/actions";
 
 const Menu = (props) => {
-  const { menuTitle, theme } = props;
-    const classes = useStyles();
+  const { menuTitle, theme, changeTheme} = props;
+    const classes = useStyles(); 
 
     return (
         <AppBar position="sticky">
@@ -60,6 +58,7 @@ const Menu = (props) => {
               direction="row"
               justify="flex-end"
               alignItems="center"
+              className={classes.iconRow}
             >
               <Toolbar >
                 <Tabs
@@ -72,18 +71,12 @@ const Menu = (props) => {
                 >         
                   <MenuItem link={`https://github.com/heckwithu2`} image={`GitHub`}/>
                 </Tabs>
-                <Tabs
-                className={classes.themeIcon}
-                variant="fullWidth"
-                >         
-                  <Tab className={theme === "Dark" ? classes.moon : classes.sun}  icon={<Dark/>}/>
-                </Tabs>
               </Toolbar>
+              {localStorage.getItem("theme") === "Dark" 
+              ? <NightsStayIcon onClick={() => changeTheme("Light")} className={classes.themeIconDark}/> 
+              : <WbSunnyIcon onClick={() => changeTheme("Dark")} className={classes.themeIconLight}/>}
             </Grid>
           </Grid>
-
-
-        
       </AppBar>
     )
 }
@@ -94,7 +87,7 @@ Menu.propTypes = {
 }
 
 Menu.defaultProps = {
-  theme: "Dark",
+  theme: localStorage.getItem("theme"),
   menuTitle: [ 
     "About",
     "Curriculum Vitae",
@@ -102,4 +95,17 @@ Menu.defaultProps = {
   ],
 }
 
-export default Menu;
+function mapStateToProps(state) {
+  return {
+    theme: state.init.theme,
+  };
+}
+
+
+const mapDispatchToProps = dispatch => {
+  return {
+    changeTheme: payload => dispatch(changeTheme(payload)),
+  }
+}
+
+;export default connect(mapStateToProps, mapDispatchToProps)(Menu);

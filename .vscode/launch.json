@@ -7,7 +7,13 @@
         "reAttach": true,
         "name": "Portfolio front end debuger",
         "url": "http://localhost:3000",
-        "webRoot": "${workspaceFolder}"
+        "webRoot": "${workspaceFolder}",
+        "pathMappings": [
+          {
+            "url": "file:///C:/Users/jerem/Desktop/Github/Applications/portfolio-react-front-end/src",
+            "path": "${workspaceFolder}/src"
+          }
+        ]
       }
     ]
   }

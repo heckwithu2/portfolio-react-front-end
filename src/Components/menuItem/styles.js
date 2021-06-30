@@ -27,5 +27,6 @@ export const useStyles = makeStyles((theme) => ({
     },
     titleActive : {
         color: theme.categories.blue.light,
-    }
+    },
+    
 }));

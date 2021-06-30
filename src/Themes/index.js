@@ -9,7 +9,7 @@ export const black = "#000000";
 const superDarkGrey = "#191919";
 const superDarkLightGrey = "#757575"; 
 const darkerGrey = "#191919";
-const darkGrey = "#191919";
+export const  darkGrey = "#191919";
 const orange = '#ffc400';
 const lightestGrey = "#fafafa";
 const lightGrey = "#f5f5f5";
@@ -26,13 +26,13 @@ const red = "#f44336";
 const darkRed = "#b71c1c";
 
 const backgroundDarkPurple = '#160f1c';
-const backgroundLightPurple = '#160f1c';
+const backgroundLightPurple = '#f4ebfc';
 
-const backgroundDarkRed = `rgb(20, 11, 11)`;
-const backgroundDarkBlue = `rgb(17, 21, 33)`;
+const backgroundDarkRed = `#140b0b`;
+const backgroundDarkBlue = `#111521`;
 
-const backgroundLightRed = `rgb(36, 17, 17)`;
-const backgroundLightBlue = `rgb(17, 21, 36)`;
+const backgroundLightRed = `#ffe8e8`;
+const backgroundLightBlue = `#e3eafc`;
 
 
 export const lightTheme = createMuiTheme({    
@@ -44,6 +44,9 @@ export const lightTheme = createMuiTheme({
         background: {
             default: white,
             shadow: lightGrey,
+            gradientMainBlue: backgroundDarkBlue,
+            gradientMainRed: backgroundDarkRed,
+            gradientMainPurple: backgroundDarkPurple,
             gradientBlue: backgroundLightBlue,
             gradientRed: backgroundLightRed,
             gradientPurple: backgroundLightPurple,
@@ -102,6 +105,9 @@ export const darkTheme = createMuiTheme({
         background: {
             default: darkGrey,
             shadow: darkerGrey,
+            gradientMainBlue: backgroundDarkBlue,
+            gradientMainRed: backgroundDarkRed,
+            gradientMainPurple: backgroundDarkPurple,
             gradientBlue: backgroundDarkBlue,
             gradientRed: backgroundDarkRed,
             gradientPurple: backgroundDarkPurple,
