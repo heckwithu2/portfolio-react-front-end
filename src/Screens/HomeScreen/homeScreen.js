@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import Header from "../../Components/header";
 import Event from "../../Components/event";
 import Typography from '@material-ui/core/Typography';
+import { CV, HEADER, PROJECTS } from "../../routes";
 
 const HomeScreen = (props) => {
     const { categories, cvEntries, headerSectionTitles } = props;
@@ -62,12 +63,17 @@ const HomeScreen = (props) => {
                 <Header/>
             </Grid>
             
-            <Typography variant={`h6`} className={classes.sectionTitles}>{headerSectionTitles[0]}</Typography>
+            <a id={`${CV}`}>
+                <Typography variant={`h6`} className={classes.sectionTitles}>
+                    {headerSectionTitles[0]}
+                </Typography>
+            </a>
             {/* {CV} */}
             {renderCV(cvEntries)}
             
-
+            <a id={`${PROJECTS}`}>
             <Typography variant={`h6`} className={classes.sectionTitles}>{headerSectionTitles[1]}</Typography>
+            </a>
             {/* categories */}
             {renderCategories(categories)}
             

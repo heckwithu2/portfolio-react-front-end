@@ -1,6 +1,6 @@
 
 import { fade, makeStyles} from "@material-ui/core";
-import { globalBorderRadius } from "../../Themes";
+import { black, globalBorderRadius } from "../../Themes";
 
 export const useStyles = makeStyles((theme) => ({
     root: {
@@ -58,4 +58,7 @@ export const useStyles = makeStyles((theme) => ({
           },
         },
       },
+      toolbar: {
+        background: `linear-gradient(45deg, #101010, #171717)`,
+      }
 }));
