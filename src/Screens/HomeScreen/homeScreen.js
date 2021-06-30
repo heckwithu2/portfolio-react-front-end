@@ -5,8 +5,7 @@ import Project from "../../Components/project";
 import PropTypes from 'prop-types';
 import Header from "../../Components/header";
 import Event from "../../Components/event";
-import Typography from '@material-ui/core/Typography';
-import { ABOUT, CV, HEADER, PROJECTS } from "../../routes";
+import { ABOUT, CV, PROJECTS } from "../../routes";
 import SectionTitle from "../../Components/sectionTItles";
 
 const HomeScreen = (props) => {
