@@ -60,5 +60,15 @@ export const useStyles = makeStyles((theme) => ({
       },
       toolbar: {
         background: `linear-gradient(45deg, #101010, #171717)`,
+      },
+      themeIcon: {
+        margin: `0px`,
+        padding: `0px`,
+        width: `50px`,
+      },
+      moon: {
+        margin: `0px`,
+        padding: `0px`,
+        width: `50px`,
       }
 }));

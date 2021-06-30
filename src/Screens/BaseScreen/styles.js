@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme) => ({
       },
     main: {
         minHeight: `100vh`,
-        width: '100vw',
+        width: '100%',
         background: `linear-gradient(217deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%),
         linear-gradient(127deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%),
         linear-gradient(336deg, ${theme.palette.background.gradientBlue}, ${theme.palette.background.gradientRed} 70.71%)`,
@@ -19,6 +19,6 @@ export const useStyles = makeStyles((theme) => ({
         marginTop: `${globalSpacing/2}px`,
         backgroundColor: `inherit`,
         height: `auto`,
-        width: '100vw',
+        width: '100%',
     }
 }));

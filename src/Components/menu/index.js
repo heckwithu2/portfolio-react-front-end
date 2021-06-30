@@ -8,9 +8,15 @@ import MenuItem from "../menuItem";
 import {HOME,CV, PROJECTS, ABOUT} from '../../routes';
 import Tabs from '@material-ui/core/Tabs';
 import {Grid} from "@material-ui/core";
+import { 
+  FiMoon as Dark,
+  FiSun as Light,
+} from 'react-icons/fi';
+import Tab from '@material-ui/core/Tab';
+
 
 const Menu = (props) => {
-  const { menuTitle } = props;
+  const { menuTitle, theme } = props;
     const classes = useStyles();
 
     return (
@@ -36,7 +42,7 @@ const Menu = (props) => {
                 <Tabs
                   variant="fullWidth"
                 >
-                  <MenuItem link={`${HOME}#${CV}`}>{window.innerWidth > 530 ? menuTitle[1] : `CV`}</MenuItem>
+                  <MenuItem link={`${HOME}#${CV}`}>{menuTitle[1]}</MenuItem>
                 </Tabs>
                 <Tabs
                   variant="fullWidth"
@@ -66,6 +72,12 @@ const Menu = (props) => {
                 >         
                   <MenuItem link={`https://github.com/heckwithu2`} image={`GitHub`}/>
                 </Tabs>
+                <Tabs
+                className={classes.themeIcon}
+                variant="fullWidth"
+                >         
+                  <Tab className={theme === "Dark" ? classes.moon : classes.sun}  icon={<Dark/>}/>
+                </Tabs>
               </Toolbar>
             </Grid>
           </Grid>
@@ -78,9 +90,11 @@ const Menu = (props) => {
 
 Menu.propTypes = {
   menuTitle: PropTypes.string.isRequired,
+  theme: PropTypes.string.isRequired,
 }
 
 Menu.defaultProps = {
+  theme: "Dark",
   menuTitle: [ 
     "About",
     "Curriculum Vitae",
