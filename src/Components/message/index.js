@@ -19,6 +19,6 @@ Message.propTypes = {
 }
 
 Message.defaultProps = {
-    body: "My name's Jeremiah, I'm a Software Engineer with experience developing for eCommerce warehouses, eCommerce sites and energy bill sites. Thanks for spending time to view my Portfolio.",
+    body: "My name's Jeremiah, I'm a Software Engineer with experience developing for warehouses-management-software, eCommerce sites, and other sites such as lumapr. Thanks for spending time to view my Portfolio.",
 }
 export default Message;
