@@ -1,5 +1,5 @@
 export const HOME = `/home`;
-export const UTILITY = `/utilities`;
+export const UTILITY = `/utility`;
 export const SEARCH = `/search`;
 export const LOGIN = `/login`;
 export const HEADER = 'header';

@@ -7,7 +7,6 @@ import Menu from "../../Components/menu";
 const BaseScreen = (props) => {
     const { screen } = props;
     const classes = useStyles();
-    
 
     return (
         

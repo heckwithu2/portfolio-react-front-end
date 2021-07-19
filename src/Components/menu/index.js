@@ -23,7 +23,6 @@ const Menu = (props) => {
     return (
         <AppBar position="sticky">
           <LinearBarProgress/>
-
             <Grid container className={classes.toolbar}>
               <Grid
               item
