@@ -4,7 +4,7 @@ const UtilityScreen = () => {
 
     return (
         <div>
-            Hello
+            Utilities
         </div>
     )
 }
